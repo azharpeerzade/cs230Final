@@ -114,7 +114,7 @@ def maxMinCrashes(df, column, towns=None):
 def main():
     #basic set up and definiton of variables
     st.set_page_config(page_title="Crash Data Analysis", layout="wide")
-    df = pd.read_csv("final/2017_Crashes_10000_sample.csv", header=0, low_memory=False).set_index("OBJECTID")
+    df = pd.read_csv("2017_Crashes_10000_sample.csv", header=0, low_memory=False).set_index("OBJECTID")
     towns = df["CITY_TOWN_NAME"].unique().tolist()
     districts = df["DISTRICT_NUM"].unique().tolist()
     conditions = df["ROAD_SURF_COND_DESCR"].unique().tolist()
